@@ -1,0 +1,16 @@
+@import "./post-item-template/post-item-template.wxss";/*引入template的wxss*/
+page{
+	background-color: #E8E5E6;
+}
+.top-swiper{
+	width: 100%;
+	height: 350rpx;
+}
+.top-swiper image{
+	width: 100%;
+	height: 500rpx;
+}
+.new-list{
+	/* display: flex;
+	flex-direction: column; */
+}

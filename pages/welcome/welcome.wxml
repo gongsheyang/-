@@ -1,0 +1,7 @@
+<view class="welcome-page">
+	<image src="/image/user.jpg" class="user-avatar"></image>
+	<text class="user-wel">欢迎你，<text class="user-name">弓舍羊</text></text>
+	<view class="enter-border" bindtap="onEnterClick" bindlongtap="onEnterLongClick">
+		<text class="enter-content">点击进入小程序</text>
+	</view>
+</view>

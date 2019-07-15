@@ -1,0 +1,18 @@
+<import src="./post-item-template/post-item-template.wxml" />
+
+<view>
+	<swiper class="top-swiper" autoplay="true" indicator-dots="true" circular="true" interval="5000">
+		<block wx:for="{{list_data}}" wx:for-item="item" wx:key="key">
+			<swiper-item catchtap="onPostItemtap" data-post-item-id="{{item.postId}}">
+				<image src="{{item.imgSrc}}"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="new-list">
+		<block wx:for="{{list_data}}" wx:for-item="item" wx:key="key">
+			<view catchtap="onPostItemtap" data-post-item-id="{{item.postId}}">
+				<template is="postItem" data="{{...item}}" data-collected="{{postsCollected[item.postId]}}"/>
+			</view>
+		</block>
+	</view>
+</view>

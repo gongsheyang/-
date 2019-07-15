@@ -1,0 +1,7 @@
+{
+	"usingComponents": {
+		"fa":"/components/includes/fa/index"
+	},
+	"navigationBarTitleText": "文与字",
+	"enablePullDownRefresh": false
+}

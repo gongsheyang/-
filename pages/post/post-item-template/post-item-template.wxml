@@ -1,0 +1,19 @@
+<template name="postItem">
+	<view class="new-list-item">
+		<view class="list-item-top">
+			<image class="list-item-avatar" src="{{avatar}}"></image>
+			<text class="list-item-date">{{date}}</text>
+		</view>
+		<text class="list-item-title">{{title}}</text>
+		<image class="list-item-img" src="{{imgSrc}}"></image>
+		<text class="list-item-describe">{{content}}</text>
+		<view class="list-item-others">
+			<!-- <fa wx:if="{{collected}}" class="item-others-img" icon="fa fa-star text-danger"></fa>	
+			<fa wx:else class="item-others-img" icon="fa fa-star-o text-danger"></fa>	 -->
+			<fa class="item-others-img" icon="fa fa-star-o text-danger"></fa>
+			<text class="item-others-text">{{reading}}</text>
+			<fa class="item-others-img" icon="fa fa-commenting-o"></fa>	
+			<text class="item-others-text">{{collection}}</text>	
+		</view>
+	</view>
+</template>

@@ -1,0 +1,9 @@
+{
+	"usingComponents": {
+		"fa": "/components/includes/fa/index"
+	},
+	"backgroundTextStyle": "light",
+	"navigationBarBackgroundColor": "#405f80",
+	"navigationBarTitleText": "文章详情",
+	"navigationBarTextStyle": "white"
+}
