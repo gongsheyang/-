@@ -9,7 +9,11 @@ Page({
 	data: {
 		inTheaters:{},
 		comingSoon: {},
-		top250: {}
+		top250: {},
+		searchValue:"",
+		searchResult:{},
+		containerShow:true,
+		searchPanelShow:false
 	},
 
 	/**
@@ -76,8 +80,37 @@ Page({
 		wx.navigateTo({
 			url: 'more-movie/more-movie?category='+category,
 		})
+	},
+	onMovieTap: function (event) {
+		var movieId = event.currentTarget.dataset.movieid;
+		wx.navigateTo({
+			url: 'movie-detail/movie-detail?id=' + movieId,
+		})
+	},
+	onBindFocus:function(event){
+		this.setData({
+			containerShow:false,
+			searchPanelShow:true
+		});
+	},
+	onCancelImgTap:function(event){
+		this.setData({
+			containerShow: true,
+			searchPanelShow: false,
+			searchResult:{}
+		});
+		this.data.searchValue ="";
+	},
+	onBindBlur:function(event){
+		var text=event.detail.value;
+		// this.data.searchValue=event.detail.value;
+		// var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text;
+		if(text!="")
+		{
+			var searchUrl = app.globalData.doubanBase + "/v2/movie/top250" + "?start=0&count=20";
+			this.getMovieListData(searchUrl, "searchResult", "");
+		}
 	}
-	
 })
 
 // /**
